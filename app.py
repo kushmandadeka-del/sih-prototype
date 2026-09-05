@@ -49,7 +49,7 @@ def init_db():
 
 @app.route("/", methods=["GET", "POST"])
 def login():
-    if request.method== "POST":
+    if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
 
@@ -69,6 +69,52 @@ def login():
             return render_template("login.html", error="Invalid username or password")
 
     return render_template("login.html")  
+
+
+@app.route("/doctor_login", methods=["GET", "POST"])
+def doctor_login():
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+
+        conn = get_db()
+        user = conn.execute(
+            "SELECT * FROM users WHERE username = ? AND password = ? AND role = 'doctor'",
+            (username, password)
+        ).fetchone()
+        conn.close()
+
+        if user:
+            session["user_id"] = user["id"]
+            session["username"] = user["username"]
+            session["role"] = user["role"]
+            return redirect(url_for("appointments"))
+        else:
+            return render_template("doctor_login.html", error="Invalid username or password")
+
+    return render_template("doctor_login.html")    
+        
+        
+
+
+@app.route("/appointments")
+def appointments():
+    conn = get_db()
+    patients = conn.execute("SELECT * FROM patients ORDER BY created_at DESC").fetchall()
+
+    pending = []
+    seen = []
+    for p in patients:
+        record = conn.execute(
+            "SELECT COUNT(*) FROM case_records WHERE patient_id = ?", (p['id'],)
+        ).fetchone()
+        if record[0] == 0:
+            pending.append(p)
+        else:
+            seen.append(p)
+
+    conn.close()
+    return render_template("appointments.html", pending=pending, seen=seen)            
 
 
 @app.route("/register_patient", methods=["GET", "POST"])
