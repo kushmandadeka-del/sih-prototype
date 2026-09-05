@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appointments</title>
+    </head>
+    <body>
+        <h2>Patients Needing Assistance</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+            {% for p in pending %}
+            <tr>
+                <td>{{ p['name'] }}</td>
+                <td>{{ p['age'] }}</td>
+                <td>{{ p['gender'] }}</td>
+                <td>{{ p['phone'] }}</td>
+                <td><a href="/case_form/{{ p['id'] }}">Take Case </a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Already Seen Patients</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+            {% for p in seen %}
+            <tr>
+                <td>{{ p['name'] }}</td>
+                <td>{{ p['age'] }}</td>
+                <td>{{ p['gender'] }}</td>
+                <td>{{ p['phone'] }}</td>
+                <td><a href="/view_record/{{ p['id'] }}">View Record</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
