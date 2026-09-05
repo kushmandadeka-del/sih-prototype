@@ -1,0 +1,24 @@
+.patient-table {
+    width: 100%;
+}
+
+#pending-title {
+    color: #14524F;
+}
+
+#seen-title {
+    color: #14524F;
+}
+
+.action-btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.take-case-btn {
+    background-color: #E8735A;
+}
+
+.view-record-btn {
+    background-color: #14524F;
+}

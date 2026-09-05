@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: lightblue;
+    padding: 5px 0px 8px 5px;
+    display: flex;
+    align-items: center;
+    /* gap: 50px; */
+}
+#logo{
+    height: 69px;
+    width: 100px;
+    margin-right: 400px;
+    background-color: black;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+#login{
+    margin-left: 150px;
+    background-color: rgba(78, 170, 201, 0.425);
+    height: 40px;
+    width: 60px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#register{
+    margin-left: 100px;
+    background-color: rgba(78, 170, 201, 0.425);
+    height: 40px;
+    width: 120px;
+    padding-left: 8px;
+    padding-top:10px;
+    border-radius: 10px;
+
+}
+#tagline{
+    text-decoration: underline;
+}
+.menu {
+    background-color: rgb(140, 209, 232);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+#dashboard{
+    margin-left: 15px;
+    background-color: rgba(93, 184, 214, 0.6);
+    height:30px;
+    width:80px;
+    border-radius: 5px;
+    padding:5px
+}
+#case-form{
+    margin-left: 15px;
+    background-color: rgba(93, 184, 214, 0.6);
+    height:30px;
+    width:80px;
+    border-radius: 5px;
+    padding:5px
+}
+#register-patient{
+    margin-left: 15px;
+    background-color: rgba(93, 184, 214, 0.6);
+    height:30px;
+    width:115px;
+    border-radius: 5px;
+    padding:5px
+}
+#drlogin{
+    margin-left: 450px;
+    background-color: rgba(236, 240, 241, 0.425);
+    height:30px;
+    width:100px;
+    border-radius: 5px;
+    padding:5px
+}
+#appointment{
+    margin-left: 15px;
+    background-color: rgba(236, 240, 241, 0.425);
+    height:30px;
+    width:125px;
+    border-radius: 5px;
+    padding:5px
+}
+.content {
+    text-align: center;
+    padding: 40px;
+    /* gap: 40px; */
+    height: 250px;
+    width:100%;
+    background-color:rgba(223, 222, 222, 0.484)
+}
+#cap{
+    padding-bottom:10px;
+}
+.contentbox{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+#box1{
+    height: 80px;
+    width: 114px;
+    background-color: rgba(136, 199, 221, 0.425);
+    border-radius: 10px;
+    align-content: center;
+    margin-top: 20px;
+}
+#box2{
+    height: 80px;
+    width: 117px;
+    background-color: rgba(136, 199, 221, 0.425);
+    border-radius: 10px;
+    align-content: center;
+    margin-top: 20px;
+}
+.content-2{
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content:space-evenly;
+    /* gap: 40px; */
+    /* gap: 60px; */
+    height: 200px;
+    width:100%;
+    background-color: rgb(140, 209, 232);
+}
+#talk{
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(236, 240, 241, 0.425);
+}
+#multilingual{
+    height: 80px;
+    width: 120px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    background-color: rgba(236, 240, 241, 0.425);
+}
+#emergency{
+    height: 80px;
+    width: 120px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    background-color: rgba(236, 240, 241, 0.425);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color:rgb(6, 51, 124);
+    padding: 20px;
+    font-size: 15px;
+}
