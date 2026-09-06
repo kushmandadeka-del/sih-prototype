@@ -114,6 +114,7 @@
     width: 114px;
     background-color: rgba(136, 199, 221, 0.425);
     border-radius: 10px;
+    border: 1px solid rgb(1, 11, 15);
     align-content: center;
     margin-top: 20px;
 }
@@ -122,6 +123,7 @@
     width: 117px;
     background-color: rgba(136, 199, 221, 0.425);
     border-radius: 10px;
+    border: 1px solid rgb(1, 11, 15);
     align-content: center;
     margin-top: 20px;
 }
@@ -142,6 +144,7 @@
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(236, 240, 241, 0.425);
+    border: 1px solid rgb(1, 11, 15);
 }
 #multilingual{
     height: 80px;
@@ -149,6 +152,7 @@
     padding: 30px 10px;
     border-radius: 10px;
     background-color: rgba(236, 240, 241, 0.425);
+    border: 1px solid rgb(1, 11, 15);
 }
 #emergency{
     height: 80px;
@@ -156,6 +160,7 @@
     padding: 30px 10px;
     border-radius: 10px;
     background-color: rgba(236, 240, 241, 0.425);
+    border: 1px solid rgb(1, 11, 15);
 }
 .footer{
     display: flex;
